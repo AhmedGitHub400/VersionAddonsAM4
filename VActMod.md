@@ -1,1 +1,1 @@
-Version 9.451 ActMod for Garry's Mod
+Version 9.4 ActMod for Garry's Mod
