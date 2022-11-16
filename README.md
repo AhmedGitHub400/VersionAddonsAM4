@@ -1,4 +1,2 @@
 # chess
-Create chess for Garry's Mod
-
-V 9.4
+Version 9.4 ActMod for Garry's Mod
