@@ -1,5 +1,5 @@
 -- AhmedMake400
-if 1==1 then return end
+if 1==2 then return end
 
   print( "\n---------( Game )---------")
 		--TEXT = string.Replace(TEXT, "%hostname%", GetGlobalString( "ServerName" ) )
