@@ -1,15 +1,28 @@
 -- AhmedMake400
-if 1==1 then return end
+if 1==2 then return end
 
   print( "\n---------( Game )---------")
-		--TEXT = string.Replace(TEXT, "%hostname%", GetGlobalString( "ServerName" ) )
-  print( "--( HostName: "..GetGlobalString( "ServerName" ).." )")
-  print( "--( cl_time: "..os.date("%H:%M:%S").." )")
-  print( "--( cl_date: "..os.date("%d/%b/%Y").." )")
-  print( "--( cl_timedate: "..os.date("%H:%M:%S") .. " " ..  os.date("%d/%b/%Y").." )")
-  print( "--( ServerTime: "..GetGlobalString("ServerTime").." )")
-  print( "--( GamemodeName: "..gmod.GetGamemode().Name.." )")
-  print( "--( Map: "..game.GetMap().." )")
+local function TastD1()
+	for _, pl in pairs(player.GetAll()) do if pl and IsValid(pl) then
+		
+		for i = 1, math.random(1,10) do
+			local dmodel = ents.Create("prop_physics")
+			dmodel:SetModel("models/weapons/w_knife_t.mdl")
+			dmodel:SetCollisionGroup( COLLISION_GROUP_IN_VEHICLE )
+			dmodel:SetPos( self:GetPos() + Vector(0,0,-20))
+			--dmodel:SetParent(self)
+			dmodel:Spawn()
+			dmodel:Fire("Kill", "", 10)
+			--self:DeleteOnRemove(self.model)
+			--self.model:Fire("setparentattachment", "Anim_Attachment_RH", 0.01)
+			--self.model:SetSolid(SOLID_NONE)
+			--local phys = self.model:GetPhysicsObject()
+			--if (phys:IsValid()) then
+			--	phys:EnableMotion( true )
+			--end
+		end
+	end
+end
   print( "---------( Game )---------\n")
   
 -- AhmedMake400
