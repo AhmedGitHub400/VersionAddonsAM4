@@ -1,15 +1,9 @@
 -- AhmedMake400
-if 1==1 then return end
+if 1==2 then return end
 
-  print( "\n---------( Game )---------")
-		--TEXT = string.Replace(TEXT, "%hostname%", GetGlobalString( "ServerName" ) )
-  print( "--( HostName: "..GetGlobalString( "ServerName" ).." )")
-  print( "--( cl_time: "..os.date("%H:%M:%S").." )")
-  print( "--( cl_date: "..os.date("%d/%b/%Y").." )")
-  print( "--( cl_timedate: "..os.date("%H:%M:%S") .. " " ..  os.date("%d/%b/%Y").." )")
-  print( "--( ServerTime: "..GetGlobalString("ServerTime").." )")
-  print( "--( GamemodeName: "..gmod.GetGamemode().Name.." )")
-  print( "--( Map: "..game.GetMap().." )")
-  print( "---------( Game )---------\n")
+A_AM.ActMod.ActuLck = {
+			["AM4_Avs"] = true
+			,["Avs_a2_5"] = "WVcxdlpGOXRiV1JmY3pBd053PT0=" --YW1vZF9tbWRfczAwNw==
+			}
   
 -- AhmedMake400
