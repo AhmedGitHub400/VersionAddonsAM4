@@ -1,6 +1,6 @@
 -- AhmedMake400
 
-if 1==2 then return end
+if 1==1 then return end
 
 A_AM.ActMod.ActuLck = {
 			["AM4_Avs"] = true
