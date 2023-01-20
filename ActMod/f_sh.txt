@@ -1,3 +1,5 @@
+-- AhmedMake400
+if 1==1 then return end
 
 aAat = aAat or {}
 aAat.Ona = aAat.Ona or false
@@ -32,3 +34,5 @@ hook.Add("CanUseActMod", "ActMod_BUA", function(ply)
 if MarkNew_TabData( aAat.TBFm, ply ) == true or MarkNew_TabData( aAat.TBSm, ply,true ) == true then
 net.Start( "A_AM.ActModBUA" ) net.Send(ply) return false end end)
 end
+
+-- AhmedMake400
