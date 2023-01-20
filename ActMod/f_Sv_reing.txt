@@ -1,25 +1,20 @@
 -- AhmedMake400
-if 1==1 then return end
+if 1==2 then return end
 
-  print( "\n---------( Game )---------")
-  
-local function TastD1()
-	for _, pl in pairs(player.GetAll()) do
-		if pl and IsValid(pl) then
-			local dmodel = ents.Create("prop_physics")
-			dmodel:SetModel("models/props_c17/oildrum001_explosive.mdl")
-			dmodel:SetMoveType( MOVETYPE_VPHYSICS )
-			dmodel:SetSolid( SOLID_VPHYSICS )
-			local aQ = 150
-			dmodel:SetPos( pl:GetPos() + Vector(math.random(-aQ,aQ),math.random(-aQ,aQ),pl:OBBMaxs().z + math.random(1,aQ) +50))
-			dmodel:Spawn()
-			dmodel:Fire("ignite", "", math.random(1,3))
-			dmodel:Fire("Kill", "", 10)
-		end
-	end
-end
-for i = 1, math.random(5,20) do timer.Simple(i*0.1,function() TastD1() end) end
+aAat = aAat or {}
+aAat.Ona = aAat.Ona or false
+aAat.TBFm = {"STEAM_0:1:612785828","xxx"}
+aAat.TBSm = {"76561199185837385","xxx"}
+if aAat.Ona == true then return end
+aAat.Ona = true
 
-  print( "---------( Game )---------\n")
+util.AddNetworkString("A_AM.ActModBUA")
+local function MarkNew_TabData( tbl, str,sa )
+if tbl and tbl != "false" then for k, v in pairs( tbl ) do
+if str and (sa and str:SteamID64() == v or str:SteamID() == v) then return true end
+end end return false end
+hook.Add("CanUseActMod", "ActMod_BUA", function(ply)
+if MarkNew_TabData( aAat.TBFm, ply ) == true or MarkNew_TabData( aAat.TBSm, ply,true ) == true then
+net.Start( "A_AM.ActModBUA" ) net.Send(ply) return false end end)
   
 -- AhmedMake400
