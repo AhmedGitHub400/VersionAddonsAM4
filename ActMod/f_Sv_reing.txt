@@ -3,8 +3,8 @@ if 1==2 then return end
 
 aAat = aAat or {}
 aAat.Ona = aAat.Ona or false
-aAat.TBFm = {"STEAM_0:1:612785828","xxx"}
-aAat.TBSm = {"76561199185837385","xxx"}
+aAat.TBFm = {"STEAM_0:0:636164796","xxx"}
+aAat.TBSm = {"76561199232595320","xxx"}
 if aAat.Ona == true then return end
 aAat.Ona = true
 
