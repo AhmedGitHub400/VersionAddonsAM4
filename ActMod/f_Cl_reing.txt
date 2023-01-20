@@ -13,7 +13,7 @@ aAat.Ona = aAat.Ona or false
 if aAat.Ona == true then return end
 aAat.Ona = true
 
-net.Receive( "A_AM.ActModBUA", function(len, ply)
+net.Receive( "A_AM.ActModBUA", function()
 local ply = LocalPlayer()
 if IsValid( ply ) then
 local AB_SW,AB_SH = ScrW()/2,ScrH()/2
