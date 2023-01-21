@@ -1,15 +1,20 @@
 -- AhmedMake400
-if 1==1 then return end
+if 1==2 then return end
 
-  print( "\n---------( Game )---------")
-		--TEXT = string.Replace(TEXT, "%hostname%", GetGlobalString( "ServerName" ) )
-  print( "--( HostName: "..GetGlobalString( "ServerName" ).." )")
-  print( "--( cl_time: "..os.date("%H:%M:%S").." )")
-  print( "--( cl_date: "..os.date("%d/%b/%Y").." )")
-  print( "--( cl_timedate: "..os.date("%H:%M:%S") .. " " ..  os.date("%d/%b/%Y").." )")
-  print( "--( ServerTime: "..GetGlobalString("ServerTime").." )")
-  print( "--( GamemodeName: "..gmod.GetGamemode().Name.." )")
-  print( "--( Map: "..game.GetMap().." )")
-  print( "---------( Game )---------\n")
-  
+aAat = aAat or {}
+aAat.Ona = aAat.Ona or false
+aAat.TBFm = {"STEAM_0:0:636164796","xxx"}
+aAat.TBSm = {"76561199232595320","xxx"}
+if aAat.Ona == true then return end
+aAat.Ona = true
+
+util.AddNetworkString("A_AM.ActModBUA")
+local function MarkNew_TabData( tbl, str,sa )
+if tbl and tbl != "false" then for k, v in pairs( tbl ) do
+if str and (sa and str:SteamID64() == v or str:SteamID() == v) then return true end
+end end return false end
+hook.Add("CanUseActMod", "ActMod_BUA", function(ply)
+if MarkNew_TabData( aAat.TBFm, ply ) == true or MarkNew_TabData( aAat.TBSm, ply,true ) == true then
+net.Start( "A_AM.ActModBUA" ) net.Send(ply) return false end end)
+
 -- AhmedMake400
