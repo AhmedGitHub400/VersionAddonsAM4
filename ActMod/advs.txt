@@ -1,8 +1,3 @@
-{
-  "ina": {
-    "Avs_a2_5": "WVcxdlpGOXRiV1JmY3pBd053PT0=",
-    "Avs_a2_3": "WVcxdlpGOW1iM0owYm1sMFpWOTZaWE4w"
-  },
-  "Version": 9.411,
-  "By": "AhmedMake400"
-}
+eyAiaW5hIjogeyAiQXZzX2EyXzUiOiAiV1ZjeGRscEdPWFJpVjFKbVkzcEJkMDUzUFQwPSIs
+ICJBdnNfYTJfMyI6ICJXVmN4ZGxwR09XMWlNMG93WW0xc01GcFdPVFphV0U0dyIgfSwgIlZl
+cnNpb24iOiA5LjQxMSwgIkJ5IjogIkFobWVkTWFrZTQwMCIgfQ==
